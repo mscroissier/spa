@@ -1,0 +1,47 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.cita {
+  margin: v.$separacion 0;
+  background-image: url(../img/bg_citas.jpg);
+  height: 490px;
+  overflow: hidden;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: v.$negro;
+    opacity: 30%;
+  }
+
+  &__heading {
+    position: relative;
+    color: v.$blanco;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__texto {
+    position: relative;
+    color: v.$blanco;
+    max-width: 50rem;
+  }
+  &__link {
+    position: relative;
+    text-transform: uppercase;
+    @include m.boton(v.$primario, v.$blanco);
+  }
+}

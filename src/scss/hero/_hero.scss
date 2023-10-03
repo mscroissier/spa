@@ -1,0 +1,45 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: v.$separacion 0;
+  align-items: center; 
+
+  @include m.tablet {
+
+  }
+
+  &__contenido {
+    margin-bottom: 5rem;
+    box-shadow: 0px 14px 10px -1px #455a64; 
+    width: 100%;
+    height: 22rem;
+    @include m.tablet {
+      height: 60rem;
+    }
+  }
+
+  &__imagen {
+    width: 100%;
+    object-fit: cover;
+    height: 22rem;
+    @include m.tablet {
+      height: 60rem;
+    }
+  }
+  &__textos {
+    display: flex;
+    flex-direction: column;
+    padding: v.$separacion 0;
+    text-align: center;
+  }
+  &__heading {
+    text-transform: uppercase;
+  }
+  &__texto {
+    color:lighten(v.$negro, 60%);
+  }
+}
+

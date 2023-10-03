@@ -1,0 +1,40 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.info {
+  display: flex;
+  flex-direction: column;
+  // padding: 0 0 20rem 0;
+  align-items: center;    
+  @include m.tablet {
+    justify-content: space-between;
+    flex-direction: row;
+
+  }
+
+  &__card {
+    position: relative;
+    margin-bottom: 20rem;
+  }
+&__imagen{
+  &:hover{
+    @include m.transform(-0.01);
+  }
+}
+  &__contenido {
+    position: absolute;
+    left: calc(v.$separacion/3);
+    bottom: -(v.$separacion*3);
+    width: 90%;
+    text-align: center;
+    background-color: v.$blanco;
+  }
+  &__heading {
+    text-transform: uppercase;
+    margin: 3rem 0;
+  }
+  &__enlace {
+    text-transform: uppercase;
+    @include m.boton(v.$secundario, v.$blanco)
+  }
+}

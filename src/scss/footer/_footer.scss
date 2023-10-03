@@ -1,0 +1,47 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer {
+  &__heading {
+    text-transform: uppercase;
+  }
+  &__grid {
+    text-align: center;
+    @include m.tablet {
+      @include m.crear-grid(3, 2rem);
+      text-align: inherit;
+    }
+  }
+  &__widget {
+    text-align: center;
+    @include m.tablet {
+      text-align: inherit;
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+    }
+  }
+  &__redes {
+    display: flex;
+    justify-content: center;
+    @include m.tablet {
+      justify-content: flex-start;
+
+    }
+  }
+  &__imagen {
+    width: 3.5rem;
+  }
+  &__copyright {
+    display: block;
+    color: lighten(v.$negro, 60%);
+    border-top: 1px solid lighten(v.$negro, 90%);
+    padding: calc(v.$separacion / 3);
+    text-align: center;
+  }
+}

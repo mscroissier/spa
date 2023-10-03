@@ -1,0 +1,27 @@
+//Fuentes
+@font-face {
+  font-family: Italianno;
+  src: url(../fonts/Italianno-Regular.ttf);
+}
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+$fuente_principal: Lato;
+$fuente_secundaria: Italianno;
+
+//Tamaño media-queries
+$small: 480px;
+$medium: 768px;
+$big: 1280px;
+
+//Colores
+$primario: #7bd1d7;
+$secundario: #e082a8;
+$fondoBody: #f8f8f8;
+$negro: #000000;
+$blanco: #ffffff;
+$grisClaro: #eceeef;
+
+$separacion: 5rem;

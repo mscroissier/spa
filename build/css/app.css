@@ -1,0 +1,427 @@
+@font-face {
+  font-family: Italianno;
+  src: url(../fonts/Italianno-Regular.ttf);
+}
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Lato;
+  font-size: 1.6rem;
+  background-color: #f8f8f8;
+}
+
+p {
+  color: #000000;
+  font-size: 2rem;
+}
+
+h1, h2, h3 {
+  margin: 0 0 5rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+span {
+  display: block;
+  text-transform: lowercase;
+  font-family: Italianno;
+  color: #e082a8;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.header__logo {
+  width: 30rem;
+  margin-bottom: 5rem;
+}
+.header__redes {
+  display: flex;
+}
+.header__imagen {
+  width: 3rem;
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.navegacion {
+  background-color: #7bd1d7;
+  padding: 2.5rem;
+}
+.navegacion__enlaces {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .navegacion__enlaces {
+    flex-direction: row;
+  }
+}
+.navegacion__link {
+  color: #ffffff;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+  align-items: center;
+}
+.hero__contenido {
+  margin-bottom: 5rem;
+  box-shadow: 0px 14px 10px -1px #455a64;
+  width: 100%;
+  height: 22rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__contenido {
+    height: 60rem;
+  }
+}
+.hero__imagen {
+  width: 100%;
+  object-fit: cover;
+  height: 22rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__imagen {
+    height: 60rem;
+  }
+}
+.hero__textos {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+  text-align: center;
+}
+.hero__heading {
+  text-transform: uppercase;
+}
+.hero__texto {
+  color: #999999;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .info {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+.info__card {
+  position: relative;
+  margin-bottom: 20rem;
+}
+.info__imagen:hover {
+  transform: rotate(-3.6deg) scale(1.2);
+}
+.info__contenido {
+  position: absolute;
+  left: 1.6666666667rem;
+  bottom: -15rem;
+  width: 90%;
+  text-align: center;
+  background-color: #ffffff;
+}
+.info__heading {
+  text-transform: uppercase;
+  margin: 3rem 0;
+}
+.info__enlace {
+  text-transform: uppercase;
+  background-color: #e082a8;
+  border: 0;
+  border-radius: 1rem;
+  color: #ffffff;
+  display: block;
+  font-weight: 700;
+  padding: 1.2rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+.info__enlace:hover {
+  cursor: pointer;
+  background-color: #d24981;
+}
+@media screen and (min-width: 768px) {
+  .info__enlace {
+    width: auto;
+  }
+}
+
+.horarios {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 5rem 0;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .horarios {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.horarios__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 64rem;
+  padding: 5rem 0;
+  background-color: #7bd1d7;
+}
+.horarios__textos {
+  max-width: 50rem;
+  padding-right: 5rem;
+  color: #ffffff;
+  text-align: center;
+}
+.horarios__texto {
+  color: #ffffff;
+  text-align: center;
+}
+.horarios__heading {
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.horarios__imagen {
+  background-image: url(../img/bg_horarios.jpg);
+  height: 64rem;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+@media screen and (min-width: 768px) {
+  .horarios__imagen {
+    background-position: top right;
+  }
+}
+.horarios__tabla {
+  max-width: 50rem;
+  color: #ffffff;
+  border: 4px solid #e082a8;
+  border-collapse: collapse;
+  line-height: 2;
+  margin: 5rem;
+  text-align: center;
+  table-layout: fixed;
+  width: 80%;
+}
+.horarios__tabla thead {
+  background-color: #e082a8;
+}
+
+.productos__heading {
+  text-align: center;
+  text-transform: uppercase;
+}
+.productos__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .productos__contenido {
+    flex-direction: row;
+  }
+}
+.productos__card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.productos__imagen:hover {
+  transform: rotate(0deg) scale(1.2);
+}
+.productos__card__heading {
+  color: #e082a8;
+  margin: 2rem 0;
+  text-align: center;
+}
+.productos__texto {
+  margin: 2rem 2rem;
+}
+.productos__precio {
+  font-weight: 200;
+  text-align: center;
+  color: #999999;
+}
+
+.cita {
+  margin: 5rem 0;
+  background-image: url(../img/bg_citas.jpg);
+  height: 490px;
+  overflow: hidden;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cita::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 30%;
+}
+.cita__heading {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.cita__texto {
+  position: relative;
+  color: #ffffff;
+  max-width: 50rem;
+}
+.cita__link {
+  position: relative;
+  text-transform: uppercase;
+  background-color: #7bd1d7;
+  border: 0;
+  border-radius: 1rem;
+  color: #ffffff;
+  display: block;
+  font-weight: 700;
+  padding: 1.2rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+.cita__link:hover {
+  cursor: pointer;
+  background-color: #47bfc7;
+}
+@media screen and (min-width: 768px) {
+  .cita__link {
+    width: auto;
+  }
+}
+
+.footer__heading {
+  text-transform: uppercase;
+}
+.footer__grid {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: inherit;
+  }
+}
+.footer__widget {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__widget {
+    text-align: inherit;
+  }
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+}
+.footer__nav a {
+  text-decoration: none;
+}
+.footer__redes {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__redes {
+    justify-content: flex-start;
+  }
+}
+.footer__imagen {
+  width: 3.5rem;
+}
+.footer__copyright {
+  display: block;
+  color: #999999;
+  border-top: 1px solid #e6e6e6;
+  padding: 1.6666666667rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=app.css.map */
